@@ -11,9 +11,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/cu', (req, res) => {
-  res.send({
-    messa: 'chupa'
-  })
+  res.send([{
+    produto: 'celular'
+  }, {
+    produto: 'videogame'
+  }, {
+    produto: 'tv'
+  }])
 })
 
 app.listen(process.env.PORT || 3000)
