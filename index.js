@@ -5,11 +5,15 @@ var cors = require('cors')
 app.use(cors())
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.json({
+    message: 'olá!'
+  })
 })
 
 app.get('/cu', (req, res) => {
-  res.send('rolaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+  res.send({
+    messa: 'chupa'
+  })
 })
 
 app.listen(process.env.PORT || 3000)
